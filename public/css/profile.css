@@ -18,12 +18,6 @@
     cursor: pointer;
 }
 
-h5 {
-    margin: 8px 0 0 0;
-    font-size: 15px;
-    color: white;
-}
-
 P {
     font-size: 15px;
     color: rgb(193, 193, 193);
@@ -38,4 +32,26 @@ P {
     background-color: #1A1D21;
     color: white;
     cursor: pointer;
+}
+
+.pencil {
+    color: white;
+    position: relative;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#username {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    width: 100px;
+    margin-top: 5px;
+}
+
+#username:focus {
+    outline: none;
 }

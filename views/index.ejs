@@ -39,13 +39,18 @@
             let date = new Date();
             let username = prompt("닉네임을 입력해주세요.");
 
+            function changeName() {
+                username = $("#username").val();
+                socket.emit("new_name", {username: username});
+            }
+
             const socket = io.connect();
 
             let id = "";
             socket.on("info", function(data) {
                 id = data;
             })
-
+         
             socket.emit("info2", {username: username});
 
             socket.on("notice", function(data) {
@@ -56,8 +61,8 @@
                 let p = document.createElement("p");
                 let span =  document.createElement("span");
 
-                p.innerText = data;
-                div.innerText = "#자유에 참여했습니다.";
+                p.innerText = data.username;
+                div.innerText = data.msg;
 
                 let minute = (date.getMinutes() < 10 ? "0" + date.getMinutes() : "" + date.getMinutes());
 

@@ -18,7 +18,6 @@ const upload = multer({
             done(null, req.body.name + ext);
         }
     }),
-    // 5MB
     limits: {fileSize : 5*1024*1024},
 })
 
@@ -45,7 +44,12 @@ io.on("connection", function(socket) {
     socket.on("info2", function(data) {
         list[socket.id] = data.username;
         io.emit("members", list);
-        io.emit("notice", data.username);
+        io.emit("notice", {username: data.username, msg: "# 자유에 참여했습니다."});
+    })
+
+    socket.on("new_name", function(data) {
+        list[socket.id] = data.username;
+        io.emit("members", list);
     })
 
     socket.on("send", function(data) {
@@ -63,7 +67,7 @@ io.on("connection", function(socket) {
     })
 
     socket.on("disconnect", function() {
-        // io.emit("notice", list[socket.id] + "님이 퇴장하셨습니다.");
+        io.emit("notice", {username: list[socket.id], msg: "# 자유에서 퇴장했습니다."});
         delete list[socket.id];
         io.emit("members", list);
     })

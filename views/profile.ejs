@@ -1,17 +1,19 @@
 <div class="profile hide">
-    <div class="profile_header d-flex">
-        <label for="upload_profile_img">
-            <img src="/profile_img/sample.png">
-        </label>
-        <input id="h_input_username" type="text" hidden>
+    <div class="profile_header d-flex space-between">
+        <div class="d-flex">
+            <label for="upload_profile_img">
+                <img src="/profile_img/sample.png">
+            </label>
+            <div>
+                <input type="text" id="username" required>
+            </div>
+        </div>
         <form enctype="multipart/form-data">
             <input type="file" id="upload_profile_img" name="userfile" hidden onchange="imgPreview();">
         </form>
-        <div>
-            <h5 id="username"></h5>
-        </div>
+        <i class="bi bi-pencil pencil" onclick="changeName();"></i>
     </div>
-    <div class="status"><i class="bi bi-pencil"></i></div>
+    <div class="status">🐣</div>
     <p>상태 지우기</p>
     <p>자신을 자리 비움(으)로 설정</p>
     <p>알림 일시 중지</p>
