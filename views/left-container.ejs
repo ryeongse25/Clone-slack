@@ -1,0 +1,43 @@
+<div class="left_container">
+    <div class="roomName">
+        SeSAC4_코딩온 <i class="bi bi-chevron-down" style="bottom: 5px;"></i>
+    </div>
+    <hr>
+    <div class="menu">
+        <i class="bi bi-chat-text"></i> 스레드
+    </div>
+    <div class="menu">
+        <i class="bi bi-chat-text"></i> 다이렉트 메세지
+    </div>
+    <div class="menu">
+        <i class="bi bi-at"></i> 멘션 및 반응
+    </div>
+    <div class="menu">
+        <i class="bi bi-bookmark"></i> 저장된 항목
+    </div>
+    <div class="menu">
+        <i class="bi bi-building"></i> Slack Connect
+    </div>
+    <div class="menu">
+        <i class="bi bi-three-dots-vertical"></i> 더 보기
+    </div>
+    <hr>
+    <div id="channel" class="d-title">
+        <div class="dropdown" onclick="dropdown('#channels');">
+            <i class="bi bi-caret-down-fill"></i>
+            <span class="dropdown">채널</span>
+        </div>
+        <div id="channels" style="padding: 0;">
+            <p># 강의</p>
+            <p># 과제제출</p>
+            <p># 자유</p>
+        </div>
+    </div>
+    <div id="dm" class="d-title">
+        <div class="reset dropdown" onclick="dropdown('#members');">
+            <i class="bi bi-caret-down-fill"></i>
+            <span>다이렉트 메세지</span>
+        </div>
+        <div id="members" class="dm_list"></div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="textbox_container">
+    <div class="icons">
+        <i class="bi bi-type-bold"></i>
+        <i class="bi bi-type-italic"></i>
+        <i class="bi bi-type-underline"></i> 
+        <span>|</span>
+        <i class="bi bi-link-45deg"></i>
+        <span>|</span>
+        <i class="bi bi-justify-left" onclick="left();"></i>
+        <i class="bi bi-justify" onclick="center();"></i>
+        <i class="bi bi-justify-right" onclick="right();"></i>
+        <span>|</span>
+        <i class="bi bi-code-slash"></i>
+    </div>
+    <textarea id="message" rows="3" placeholder="#자유에 메시지 보내기" onkeydown="pressEnter();"></textarea>
+    <div class="flex-box">
+        <div class="icons">
+            <label for="send_file">
+                <i class="bi bi-plus-circle-fill" style="margin: 0;"></i>
+            </label>
+            <input type="file" id="send_file" hidden>
+            <span>|</span>
+            <i class="bi bi-camera-video"></i>
+            <i class="bi bi-mic"></i>
+            <span>|</span>
+            <i id="emoji_btn" class="bi bi-emoji-smile"></i>
+            <i class="bi bi-at"></i>
+        </div>
+        <div class="send_btn" onclick="btnSend();">
+            <i class="bi bi-send-fill"></i>
+            <span style="color: gray">|</span>
+            <i class="bi bi-chevron-down"></i>
+        </div>
+    </div>
+</div>
+
+<script>
+    const button = document.querySelector("#emoji_btn");
+    const picker = new EmojiButton({
+        position: 'bottom-start'
+    });
+
+    button.addEventListener('click', () => {
+        picker.togglePicker(button);
+    });
+    
+    picker.on('emoji', emoji => {
+        const text_box = document.querySelector('#message');
+        text_box.value += emoji;
+        setTimeout(function(){
+            text_box.focus();
+        }, 1000);
+    });
+</script>

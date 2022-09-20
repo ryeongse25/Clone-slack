@@ -1,0 +1,41 @@
+.profile {
+    position: absolute;
+    right: 5px;
+    background-color: #222529;
+    padding: 10px;
+    border: 0.1px solid rgb(70, 70, 70);
+    border-radius: 8px;
+    z-index: 100;
+    width: 250px;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 10px 0;
+    border: 0.1px solid rgb(70, 70, 70);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+h5 {
+    margin: 8px 0 0 0;
+    font-size: 15px;
+    color: white;
+}
+
+P {
+    font-size: 15px;
+    color: rgb(193, 193, 193);
+}
+
+.status {
+    width: 220px;
+    height: 20px;
+    border: 0.1px solid rgb(70, 70, 70);
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #1A1D21;
+    color: white;
+    cursor: pointer;
+}

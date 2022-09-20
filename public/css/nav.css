@@ -1,0 +1,33 @@
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121016;
+    height: 40px;
+    padding: 0 10px;
+    border-bottom: 0.1px solid rgb(59, 59, 59);;
+}
+
+.search_box {
+    width: 60%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 8px;
+    background-color: #3E3D42;
+    color: lightgray;
+    font-size: 13px;
+}
+
+.profile_icon {
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.profile_icon img {
+    width: 30px;
+    height: 30px;
+    border: 0.1px solid rgb(70, 70, 70);
+    border-radius: 8px;
+}

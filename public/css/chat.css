@@ -1,0 +1,30 @@
+.msg_flex {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.msg_flex img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-right: 10px;
+}
+
+.msg_flex div div {
+    margin: 7px 10px 0 0;
+    font-size: 13px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.msg_flex p {
+    font-weight: bolder;
+    margin: 0;
+}
+
+.msg_flex span {
+    font-size: 13px;
+    color: gray;
+    margin-left: 10px;
+}

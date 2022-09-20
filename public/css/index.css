@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    color: lightgray;
+    height: 100%;
+}
+
+.container .bi-chevron-down {
+    font-size: 10px;
+    position: relative;
+    -webkit-text-stroke: 1px;
+}
+
+.right_container {
+    background-color: #1A1D21;
+}
+
+.right_nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.right_nav div {
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 15px 0 0 0;
+}

@@ -1,0 +1,94 @@
+.left_container {
+    background-color: #19171D;
+    border-right: 0.1px solid rgb(59, 59, 59);
+}
+
+.roomName {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.left_container div {
+    margin: 15px 0 0 0;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.menu {
+    font-size: 15px;
+    color: gray;
+}
+
+.menu i {
+    margin-right: 4px;
+}
+
+.menu:hover {
+    color: white;
+}
+
+hr {
+    margin-top: 15px;
+    border: 0.1px solid rgb(59, 59, 59);
+}
+
+.d-title {
+    font-size: 15px;
+    color: gray;
+}
+
+#channel .dropdown {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#channel p {
+    color: gray;
+}
+
+
+#channel p:hover {
+    color: white;
+}
+
+.bi-caret-down-fill {
+    font-size: 13px;
+    margin-right: 8px;
+}
+
+#dm img {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 2px;
+}
+
+.dm_list {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.dm_list span {
+    position: relative;
+    bottom: 8px;
+    right: 5px;
+    margin: 0 10px;
+}
+
+#members .dm_list:hover {
+    color: white;
+}
+
+.msg_box {
+    margin: 10px 15px;
+}
+
+.reset {
+    margin: 0 !important;
+    padding: 0 0 10px 0 !important;
+}
+
+.dropdown:hover {
+    color: white;
+}
