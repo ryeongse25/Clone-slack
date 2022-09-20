@@ -13,7 +13,7 @@ const upload = multer({
             done(null, 'public/profile_img/');
         },
         filename(req, file, done) {
-            console.log(req.body);
+            console.log("file", req.body);
             const ext = path.extname(file.originalname);
             done(null, req.body.name + ext);
         }
@@ -28,11 +28,12 @@ app.use(express.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get("/", function(req, res) {
-    console.log(req.file);
     res.render("index");
 });
 
 app.post("/", upload.single('userfile'), function(req, res) {
+    console.log("req.body", req.body);
+    console.log(req.file);
     res.send(req.body);
 })
 

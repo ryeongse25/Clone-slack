@@ -4,7 +4,9 @@
             <img src="/profile_img/sample.png">
         </label>
         <input id="h_input_username" type="text" hidden>
-        <input type="file" id="upload_profile_img" name="userfile" hidden onchange="imgPreview();">
+        <form enctype="multipart/form-data">
+            <input type="file" id="upload_profile_img" name="userfile" hidden onchange="imgPreview();">
+        </form>
         <div>
             <h5 id="username"></h5>
         </div>

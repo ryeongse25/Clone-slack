@@ -22,19 +22,19 @@ function imgPreview() {
         nav_img.src = "/profile_img/sample.png";
     }
 
+    let formData = new FormData();
+    let fileUpload = document.getElementById("upload_profile_img");
+
+    formData.append("userfile", fileUpload.files[0]);
+    formData.append("name", username);
+
     axios({
         method: "post",
         url: "/",
-        data: {
-            name: username
-        }
+        data: formData
     }).then((response) => {
-        // console.log(response);
         return response.data;
-    }).then((d) => {
-        alert(d.message);
     });
-    
 }
 
 function dropdown(target) {
