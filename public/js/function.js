@@ -25,8 +25,8 @@ function imgPreview() {
     let formData = new FormData();
     let fileUpload = document.getElementById("upload_profile_img");
 
-    formData.append("userfile", fileUpload.files[0]);
     formData.append("name", username);
+    formData.append("userfile", fileUpload.files[0]);
 
     axios({
         method: "post",
