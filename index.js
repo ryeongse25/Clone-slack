@@ -31,9 +31,7 @@ app.get("/", function(req, res) {
 });
 
 app.post("/", upload.single('userfile'), function(req, res) {
-    console.log("req.body", req.body);
-    console.log(req.file);
-    res.send(req.body);
+    res.send(req.file.filename);
 })
 
 let list = {};
